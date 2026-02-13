@@ -336,7 +336,7 @@ class Scraper:
             if (i // batch_size) % config["gc_every"] == 0:
                 gc.collect()
         
-        connector.close()
+        await connector.close()
         
         # Save
         print(f"\n[3/3] Saving {len(all_places):,} businesses...")
