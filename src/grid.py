@@ -179,7 +179,7 @@ class GeoGrid:
             "total_sectors": total,
             "land_sectors": land,
             "water_sectors": water,
-            "water_elimination": f"{(water/total)*100:.1f}%",
+            "water_elimination": water/total,  # Float for formatting
             "estimated_requests": land,
         }
     
